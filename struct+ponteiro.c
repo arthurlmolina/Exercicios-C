@@ -1,4 +1,4 @@
-//1) Conclua o programa abaixo onde a estrutura dever· possuir:
+//1) Conclua o programa abaixo onde a estrutura dever√° possuir:
 //nome
 //telefone
 //email
@@ -6,26 +6,21 @@
 //
 //Crie um vetor (de tamanho3) onde serao armazenados os dados de 3 pessoas (solicitar ao usuario)
 //
-//Posteriormente, crie vari·veis de ponteiro (uma para cada vari·vel) e posteriormente atribua o valor 10 para a vari·vel x.
-//Em seguida, a vari·vel y dever· possuir o dobro da vari·vel x, vari·vel z dever· possuir o possuir 10 vezes o valor de y, subtraindo o valor 20 do valor final.
-//O valor atribuÌdo para a vari·vel Z dever· vir atravÈs de seu ponteiro.
+//Posteriormente, crie vari√°veis de ponteiro (uma para cada vari√°vel) e posteriormente atribua o valor 10 para a vari√°vel x.
+//Em seguida, a vari√°vel y dever√° possuir o dobro da vari√°vel x, vari√°vel z dever√° possuir o possuir 10 vezes o valor de y, subtraindo o valor 20 do valor final.
+//O valor atribu√≠do para a vari√°vel Z dever√° vir atrav√©s de seu ponteiro.
+//A vari√°vel w receber√° o terceiro caractere do segundo nome do vetor.
+//A vari√°vel k dever√° receber a metade do valor da vari√°vel ao qual z est√° apontando.
+//A vari√°vel n dever√° receber apenas 32,5% do valor atribu√≠do a soma das vari√°vel x e y, mas os valores dever√°o vir de seus respectivos ponteiros.
 
-//A vari·vel w receber· o terceiro caractere do segundo nome do vetor.
+//Ao usu√°rio:
+//Mostre o valor de cada vari√°vel, bem como seu endere√ßo de mem√≥ria
 
-//A vari·vel k dever· receber a metade do valor da vari·vel ao qual z est· apontando.
+//Mostre o valor de cada ponteiro, bem como o seu endere√ßo de mem√≥ria
 
+//Mostre o endere√ßo de mem√≥ria que cada ponteiro aponta
 
-//A vari·vel n dever· receber apenas 32,5% do valor atribuÌdo a soma das vari·veis x e y, mas os valores dever„o vir de seus respectivos ponteiros.
-
-
-//Ao usu·rio:
-//Mostre o valor de cada vari·vel, bem como seu endereÁo de memÛria
-
-//Mostre o valor de cada ponteiro, bem como o seu endereÁo de memÛria
-
-//Mostre o endereÁo de memÛria que cada ponteiro aponta
-
-//Mostre o consumo em bytes de cada vari·vel, ponteiro e estrutura.
+//Mostre o consumo em bytes de cada vari√°vel, ponteiro e estrutura.
 
 #include <stdio.h>
 #include <stdlib.h>
