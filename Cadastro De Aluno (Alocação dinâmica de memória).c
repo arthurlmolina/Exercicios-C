@@ -13,16 +13,21 @@ int main(){
 	char nomeTmp[35];
 	struct Aluno *ptr;
 	int temBuffer;
+	int memoriaStack=0, memoriaHeap=0;
 	printf("Quantos alunos voce deseja cadastrar? ");
 	scanf("%d", &n);
 	getchar();
 	float *media;
+	memoriaStack =  sizeof(n) + sizeof(i) + sizeof(i2) + sizeof(tam) + sizeof(ch) + sizeof(nomeTmp) + sizeof(ptr) + sizeof(media) + sizeof(temBuffer);
 	media = malloc(n*sizeof(float));
+	memoriaHeap += n*sizeof(float);
+	
 	if (media==NULL){
 		printf("Erro ao alocar a memoria da media");
 		return 1;
 	}
 	ptr = malloc(n*sizeof(struct Aluno));
+	memoriaHeap += sizeof(struct Aluno);
 	if(ptr==NULL){
 		printf("Erro ao alocar memória das structs");
 		return 1;
@@ -40,6 +45,7 @@ int main(){
 			while(( ch = getchar()) != '\n' && ch != EOF );
 		}
 		ptr[i].nome = malloc((tam+1)*sizeof(char));
+		memoriaHeap += (tam+1) * sizeof(char);
 		if(ptr[i].nome == NULL ){
 			printf("Erro ao alocar a memoria do aluno %d", i+1);
 			return 1;
@@ -49,6 +55,7 @@ int main(){
 		printf("Quantas notas deseja armazenar? ");
 		scanf("%d", &ptr[i].qtdNotas);
 		ptr[i].notas = malloc(ptr[i].qtdNotas*sizeof(float));
+		memoriaHeap += ptr[i].qtdNotas*sizeof(float);
 		if(ptr[i].notas==NULL){
 			printf("Erro ao alocar a memoria da(s) nota(s) do aluno %d", i+1);
 			return 1;
@@ -75,7 +82,7 @@ int main(){
 		printf("Media das notas: %.2f\n", media[i]);
 		
 		printf("----------\n");
-	}
+	}	
 	//liberando blocos alocados
 	for (i=0; i<n; i++){
 		free(ptr[i].nome);
@@ -83,6 +90,7 @@ int main(){
 	}
 	free(media);
 	free(ptr);
-	
+	printf("Quantidades de bytes no stack: %d", memoriaStack);
+	printf("Quantidades de bytes no heap: %d", memoriaHeap);
 	return 0;
 }
