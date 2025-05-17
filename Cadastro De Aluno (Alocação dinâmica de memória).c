@@ -27,7 +27,7 @@ int main(){
 		return 1;
 	}
 	ptr = malloc(n*sizeof(struct Aluno));
-	memoriaHeap += sizeof(struct Aluno);
+	memoriaHeap += n* sizeof(struct Aluno);
 	if(ptr==NULL){
 		printf("Erro ao alocar memória das structs");
 		return 1;
@@ -90,7 +90,7 @@ int main(){
 	}
 	free(media);
 	free(ptr);
-	printf("Quantidades de bytes no stack: %d", memoriaStack);
-	printf("Quantidades de bytes no heap: %d", memoriaHeap);
+	printf("Quantidades de bytes consumida no stack: %d\n", memoriaStack);
+	printf("Quantidades de bytes consumida no heap: %d", memoriaHeap);
 	return 0;
 }
